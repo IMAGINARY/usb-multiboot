@@ -1,0 +1,7 @@
+.Spotlight-V100/
+.Trashes/
+._.Trashes
+.fseventsd/
+casper-rw-empty
+images/*.iso
+images/*.bin
