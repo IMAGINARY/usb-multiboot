@@ -16,7 +16,7 @@ as well as Windows installation disks.
  1. If the ISO image is Ubuntu based, like IMAGINARY.OS, you can rename the ISO file to `IMAGINARYOS.iso`,
     otherwise proceed with the [advanced configuration](#advanced-configuration)
  1. Go to [How to boot the USB pen drive](#how-to-boot-the-usb-pendrive)
- 
+
 # How to boot the USB pen drive
  - Reboot your PC with the usb pen drive attached
  - During early boot, hit the respective key to enter the menu for selecting the boot device
@@ -26,7 +26,24 @@ as well as Windows installation disks.
 
 # Troubleshooting
  - TODO
- 
+
 # Advanced configuration
+## Grub configuration
  - Adjust the loopback or chainloading configuration in `/boot/grub/grub.cfg`
- 
+
+## Booting in legacy BIOS mode
+This requires a Linux system with `syslinux`, `dd` and `parted` installed.
+
+Run the following commands where:
+- `/dev/sdX` has to be replaced with the device file for the USB drive.
+- `/path/to/usb/boot` has to be replaced with the mount point of the FAT32 partition
+of the USB drive.
+```
+sudo syslinux -i -d /boot/syslinux /dev/sdbX
+sudo dd conv=notrunc bs=440 count=1 if=/path/to/usb/boot/syslinux/mbr/mbr.bin of=/dev/sdX
+sudo parted /dev/sdX set 1 boot on
+```
+
+# TODO
+- OS specific guides
+- short introduction/collection of resources around grub.cfg
