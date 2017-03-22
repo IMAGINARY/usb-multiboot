@@ -10,8 +10,9 @@ as well as Windows installation disks.
   - use a Master Boot Record partition table (MBR)
   - use a File Allocation Table file system (FAT32)
  1. [Download usb-multiboot](https://github.com/porst17/usb-multiboot/archive/master.zip)
-    and extract it into the the top level directoy of the usb pen drive. Afterwards, this README
-    file should be located in the top level directory of the drive.
+    and extract it. Move the contents of the folder `usb-multiboot-master` into the the
+    top level directoy of the usb pen drive. Afterwards, this README file should
+    be located in the top level directory of the drive.
  1. Download or copy the ISO image you want to boot into the `images` folder.
  1. If the ISO image is Ubuntu based, like IMAGINARY.OS, you can rename the ISO file to `IMAGINARYOS.iso`,
     otherwise proceed with the [advanced configuration](#advanced-configuration)
