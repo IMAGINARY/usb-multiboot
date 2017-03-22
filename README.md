@@ -40,7 +40,7 @@ Run the following commands where:
 - `/path/to/usb/boot` has to be replaced with the mount point of the FAT32 partition
 of the USB drive.
 ```
-sudo syslinux -i -d /boot/syslinux /dev/sdbX
+sudo syslinux -i -d /boot/syslinux /dev/sdbX1
 sudo dd conv=notrunc bs=440 count=1 if=/path/to/usb/boot/syslinux/mbr/mbr.bin of=/dev/sdX
 sudo parted /dev/sdX set 1 boot on
 ```
