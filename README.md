@@ -1,3 +1,4 @@
+***This project is archived and unmaintained. Please consider using [Ventoy](https://www.ventoy.net) instead.***
 
 # usb-multiboot
 This project provides a template for bootable USB pen drive.
